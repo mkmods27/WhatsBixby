@@ -1,0 +1,74 @@
+{
+  "name": "WhatsBixby-MD",
+  "description":"Bixby MD - Simple WhatsApp Multi Device Bot",
+  "keywords": ["bixby-md", "multi-device"],
+  "repository": "https://github.com/ZIYAN-SER/Asena-MD",
+  "env": {
+   "SESSION_ID": {
+      "description": "session id",
+      "required": false,
+      "value": ""
+    },
+    "SUDO": {
+      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "required": false
+    },
+    "ANTI_LINK": {
+      "description": "true/false",
+      "required": false,
+      "value": ""
+    },
+    "HANDLERS": {
+      "description": "prefix for commands/ using false command work without . ",
+      "required": false,
+      "value": "."
+    },
+    "PACKNAME": {
+      "description": "Sticker Packname",
+      "required": false
+    },
+    "GOODBYE_MSG": {
+      "description": "goodbye Message",
+      "required": false
+    },
+    "AUTHOR": {
+      "description": "Sticker Pack AUTHOR",
+      "required": false
+    },
+    "MODE": {
+      "description": "Work Type ",
+      "required": false,
+      "value": "private"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, same as above entered",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "required": true
+    }
+
+},
+"buildpacks": [
+
+  {
+
+      "url": "heroku/nodejs"
+
+  },
+
+  {
+
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+
+  },
+
+  {
+
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+
+  }
+
+]
+}
